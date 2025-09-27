@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{layout :: head('Administrator')}">
+</head>
+<body>
+    <div class="container my-5">
+        <div>
+            <h1>뉴스 발행처</h1>
+        </div>
+
+        <table class="table table-striped table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>발행처</th>
+                    <th>설명</th>
+                    <th>카테고리</th>
+                    <th>국가</th>
+                </tr>
+            </thead>
+            <tbody>
+            <tr th:each="src : ${sources}">
+                <td >
+                    <a th:href="${src.url}" th:text="${src.name}"></a>
+                </td>
+                <td th:text="${src.description}"></td>
+                <td th:text="${src.category}"></td>
+                <td th:text="${src.country}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
