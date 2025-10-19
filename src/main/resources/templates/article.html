@@ -17,7 +17,7 @@
     <div th:if="${error}" class="alert alert-danger" th:text="${error}"></div>
 
     <div>
-        <form th:action="@{/admin/inputArticle}" method="post" class="d-flex align-items-center gap-2">
+        <form th:action="@{/admin/inputArticles}" method="post" class="d-flex align-items-center gap-2">
             <label for="categorySelect" class="form-label mb-0 me-2">최신</label>
             <select id="categorySelect" name="categoryName" class="form-select w-auto">
                 <option th:each="cat, iterStat : ${categories}"
